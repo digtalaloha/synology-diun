@@ -73,11 +73,13 @@ DIUN_NOTIF_MAIL_TO=EMAIL_ADDRESS_TO_RECEIVE_NOTIFICATION
 sudo docker-compose up -d
 ```
 12.  Once DIUN is running you can confirm that notifications are working by running the following commands.
+
+Command to connect to the DIUN container.
 ```
 sudo docker container exec -it diun /bin/sh
 ```
-<sub>This will create a shell connection to the DIUN container</sub>
+Command to send a test notification from within the container.
 ```
 diun notif test
 ```
-<sub>This will send a test notification message</sub>
+If you receive the test notification messages you should be all set.
