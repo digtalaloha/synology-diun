@@ -1,0 +1,26 @@
+version: "3.5"
+
+services:
+  diun:
+    image: crazymax/diun:latest
+    container_name: diun
+    volumes:
+      - "/volume1/docker/diun/data:/data"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    environment:
+      - "TZ=${TZ}"
+      - "LOG_LEVEL=debug"
+      - "LOG_JSON=false"
+      - "DIUN_WATCH_SCHEDULE=${DIUN_WATCH_SCHEDULE}"
+      - "DIUN_WATCH_HEALTHCHECKS_UUID=${DIUN_WATCH_HEALTHCHECKS_UUID}"
+      - "DIUN_PROVIDERS_DOCKER=true"
+      - "DIUN_PROVIDERS_DOCKER_WATCHBYDEFAULT=true"
+      - "DIUN_NOTIF_PUSHOVER_TOKEN=${DIUN_NOTIF_PUSHOVER_TOKEN}"
+      - "DIUN_NOTIF_PUSHOVER_RECIPIENT=${DIUN_NOTIF_PUSHOVER_RECIPIENT}"
+      - "DIUN_NOTIF_MAIL_HOST=smtp.gmail.com"
+      - "DIUN_NOTIF_MAIL_PORT=587"
+      - "DIUN_NOTIF_MAIL_USERNAME=${DIUN_NOTIF_MAIL_USERNAME}"
+      - "DIUN_NOTIF_MAIL_PASSWORD=${DIUN_NOTIF_MAIL_PASSWORD}"
+      - "DIUN_NOTIF_MAIL_FROM=${DIUN_NOTIF_MAIL_FROM}"
+      - "DIUN_NOTIF_MAIL_TO=${DIUN_NOTIF_MAIL_TO}"
+    restart: unless-stopped
