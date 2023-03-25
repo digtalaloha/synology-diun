@@ -5,7 +5,7 @@
 This repository will provide you details on how to run DIUN (Docker Image Update Notifier) on your Synology NAS so you can receive updates when Docker images are updated for your running containers.  You'll be using docker-compose to spin up the DIUN container and I've included a few specifics that I use in my setup including the following:
 
 1. Health check notifications, using Healthchecks.io, to get notified if DIUN is down.
-2. Pushover for notifications sent to my iPhone.
+2. Pushover for push notifications sent to my iPhone.
 3. Email notifications using Gmail and an app password.
 
 ### YouTube Video
@@ -43,9 +43,16 @@ cd synology-diun
 ```
 mkdir data
 ```
-7. Setup Healthchecks.io to monitor the status of DIUN container (This is an optional step).
-  1. Go to https://healthchecks.io and Sign In or Sign Up for an account.
-  2. Once logged in select Add Check or edit an existing check that you would like to use and give it an appropriate name.
-  3. You'll need to copy UUID, which is the hexadecimal number that you see at the end of the Ping URL.  This will be used a little later.
-8. Pushover
-9. Gmail
+7. Setup Healthchecks.io to monitor the status of DIUN container.
+   1. Go to https://healthchecks.io and Sign In or Sign Up for an account.
+   2. Once logged in select Add Check or edit an existing check that you would like to use and give it an appropriate name.
+   3. You'll need to copy UUID, which is the hexadecimal number that you see at the end of the Ping URL.
+
+   * Reference - I cover Healthchecks.io to monitor your Synology NAS in this YouTube video -> https://youtu.be/_7oRJtHUUpw 
+8. Setup Pushover to send push notifications to your mobile device (iPhone in my case).
+   1. Go to https://pushover.net and Login or Signup for an account.
+   2. Once logged in go to the Your Applications section and click Create an Application/API Token.
+   3. This brings up the Create New Application/API Token window where you'll need to enter in a Name, check the box that you agree to all the terms and click Create Application.
+   4. You'll need to copy the API Token/Key for Application that was just created.
+   5. Also, you'll need to copy Your User Key from the home page (click on Pushover from the top navigation bar to go to the home page).
+10. Gmail
