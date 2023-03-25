@@ -6,7 +6,7 @@ This repository will provide you details on how to run DIUN (Docker Image Update
 
 1. Health check notifications, using Healthchecks.io, to get notified if DIUN is down.
 2. Pushover for push notifications sent to my iPhone.
-3. Email notifications using Gmail and an app password.
+3. Email notifications using Gmail and an app password (if needed).
 
 ### YouTube Video
 I've also created a YouTube video that goes through the steps that I went through in configuring my Synology NAS with DIUN that you can find here -> VIDEO TO COME SHORTLY.
@@ -48,11 +48,14 @@ mkdir data
    2. Once logged in select Add Check or edit an existing check that you would like to use and give it an appropriate name.
    3. You'll need to copy UUID, which is the hexadecimal number that you see at the end of the Ping URL.
 
-   * Reference - I cover Healthchecks.io to monitor your Synology NAS in this YouTube video -> https://youtu.be/_7oRJtHUUpw 
+   * Reference - I cover Healthchecks.io to monitor your Synology NAS in this YouTube video -> https://youtu.be/_7oRJtHUUpw
+
+
 8. Setup Pushover to send push notifications to your mobile device (iPhone in my case).
    1. Go to https://pushover.net and Login or Signup for an account.
    2. Once logged in go to the Your Applications section and click Create an Application/API Token.
    3. This brings up the Create New Application/API Token window where you'll need to enter in a Name, check the box that you agree to all the terms and click Create Application.
    4. You'll need to copy the API Token/Key for Application that was just created.
    5. Also, you'll need to copy Your User Key from the home page (click on Pushover from the top navigation bar to go to the home page).
-10. Gmail
+10. For Gmail email notifications you'll need an App Password if you've enabled 2-Step verification for your Google Account.  The steps to create an App Password are documented in this write up by Google -> https://support.google.com/accounts/answer/185833?hl=en and I also go through the steps in the Youtube video that is associated with this GitHub project listed above.
+11. 
