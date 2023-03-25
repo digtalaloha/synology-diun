@@ -33,7 +33,7 @@ cd /volume1/docker
 ```
 4. Clone this repository.
 ```
-NEED TO COMPLETE THIS SECTION
+sudo git clone https://github.com/digtalaloha/synology-diun.git
 ```
 5. Change directory into the newly created synology-diun directory.
 ```
@@ -43,4 +43,9 @@ cd synology-diun
 ```
 mkdir data
 ```
-...
+7. Setup Healthchecks.io to monitor the status of DIUN container (This is an optional step).
+  1. Go to https://healthchecks.io and Sign In or Sign Up for an account.
+  2. Once logged in select Add Check or edit an existing check that you would like to use and give it an appropriate name.
+  3. You'll need to copy UUID, which is the hexadecimal number that you see at the end of the Ping URL.  This will be used a little later.
+8. Pushover
+9. Gmail
