@@ -9,7 +9,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock"
     environment:
       - "TZ=${TZ}"
-      - "LOG_LEVEL=debug"
+      - "LOG_LEVEL=info"
       - "LOG_JSON=false"
       - "DIUN_WATCH_SCHEDULE=${DIUN_WATCH_SCHEDULE}"
       - "DIUN_WATCH_HEALTHCHECKS_UUID=${DIUN_WATCH_HEALTHCHECKS_UUID}"
