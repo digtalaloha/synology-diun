@@ -83,3 +83,42 @@ Command to send a test notification from within the container.
 diun notif test
 ```
 If you receive the test notification messages you should be all set.
+
+### Update Docker Containers With New Image
+1. You can either download the updated image from the Docker GUI in DSM.
+   * Go to Docker -> Image -> search for and download the image.
+
+Or from the command line using the following command. 
+```
+sudo docker pull NAME_OF_IMAGE:TAG
+```
+2. Then update the container with the new image from the Docker GUI in DSM.
+   * Go to Docker -> Container -> select the container to be updated.
+   * Stop the container.
+   * Select Action -> Reset.
+   * Start the container.
+
+Or, if using docker-compose, from the command line run the following commands.
+
+Command to stop (down) the container.
+```
+sudo docker-compose down
+```
+Command to start the container with the new image
+```
+sudo docker-compose up -d
+```
+### Update DIUN Specifically
+Run the following commands to keep DIUN up-to-date.
+
+```
+sudo docker pull crazymax/diun:latest
+sudo docker-compose down
+sudo docker-compose up -d
+```
+### Prune Old Docker Images
+For good housekeeping you can prune old/unused images using the following command.
+```
+sudo docker image prune
+Are you sure you want to contine?[y/N] y
+```
