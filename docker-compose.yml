@@ -5,7 +5,7 @@ services:
     image: crazymax/diun:latest
     container_name: diun
     volumes:
-      - "/volume1/docker/diun/data:/data"
+      - "/volume1/docker/synology-diun/data:/data"
       - "/var/run/docker.sock:/var/run/docker.sock"
     environment:
       - "TZ=${TZ}"
